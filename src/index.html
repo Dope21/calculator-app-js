@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property='og:title' content='Calculator App'>
+  <meta property='og:image' content='https://thanasak-calculator.netlify.app/design/1.png'>
+  <meta 
+        property='og:description' 
+        content='Responsive javascript Calculator with a basic layout allows users to toggle between 3 themes 
+                 and save their theme preference in the browser.'
+  >
+  <meta property='og:url' content='https://thanasak-calculator.netlify.app/'>
+  <title>Calculator app</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <!--======================== STYLE ========================-->
+  <link rel="stylesheet" href="style.css">
+  <!--======================== FONT ========================-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--======================== CALCULATOR ========================-->
+  <div class="calc__container">
+    <!--======================== HEADER ========================-->
+    <div class="calc__header">
+      <h1 class="calc__logo">calc</h1>
+
+      <div class="calc__theme">
+        <h2 class="theme__text">theme</h2>
+
+        <div class="theme__select">
+          <div class="theme__title">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+
+          <div class="theme__slide">
+            <div class="slide__bg"></div>
+            
+            <div class="theme__button">
+              <div class="theme-1 theme-button"></div>
+              <div class="theme-2 theme-button"></div>
+              <div class="theme-3 theme-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="calc-wrapper">
+    <!--======================== OUTPUT ========================-->
+      <div class="output">
+        <span data-previous-operand class="previous-operand previous-operand-dark"></span> 
+        <span data-current-operand class="current-perand"></span>
+      </div>
+      <!--======================== INPUT ========================-->
+      <div class="input">
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-delete class="del">DEL</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation ="#plus">+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation ="#minus" id="minus">-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-operation ="divide">/</button>
+        <button data-operation ="multi" class="multi">×</button>
+        <button data-all-clear class="reset">RESET</button>
+        <button data-equals class="equal">=</button>
+      </div>
+    </div>
+</body>
+  
+  <script src="script.js"></script>
+</html>
